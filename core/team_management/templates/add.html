@@ -1,0 +1,11 @@
+<div>
+    Add new member
+
+    <form method="POST" action="{% url 'add-member' %}">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Add" />
+    </form>
+</div>

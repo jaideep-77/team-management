@@ -1,0 +1,16 @@
+<div>
+    Edit current member
+
+    <form method="POST" action="{% url 'edit-member' user_id %}">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Save" />
+    </form>
+    <form method="POST" action="{% url 'delete-member' user_id %}">
+        {% csrf_token %}
+        <input type="submit" value="Delete" />
+    </form>
+
+</div>

@@ -1,0 +1,17 @@
+<div>
+    <H1>Team members</H1>
+    <label>You have {{num_members}} team members</label>
+    {% for member in members %}
+    <div>
+        <a href="{% url 'edit-member' member.id %}">
+            <label>{{member.first_name}} {{member.last_name}}</label>
+            {% if member.is_admin %} <Label> (admin)</Label> {% endif %}
+            <br>
+            <small>{{member.phone_number}}</small>
+            <small>{{member.email}}</small>
+            <hr>
+        </a>
+    </div>
+    {% endfor %}
+    <a href="{% url 'add-member' %}">Add member</a>
+</div>
