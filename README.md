@@ -3,6 +3,7 @@ This project uses django to render html and process http requests. It contains a
 
 ### Run it locally by following these steps.
 Step 1: Clone the repo
+
 Step 2: Go to cloned directory and run 2 commands - 'make' and 'make server'.
 
 Make will create a virtual environment for your directory and install django as well as perform django migrations.
