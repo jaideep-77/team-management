@@ -1,13 +1,14 @@
 <div>
     <H1>Team members</H1>
-    <label>You have {{num_members}} team members</label>
-    {% for member in members %}
+    <label>You have {{object_list.count}} team members</label>
+    {% for member in object_list %}
     <div>
         <a href="{% url 'edit-member' member.id %}">
             <label>{{member.first_name}} {{member.last_name}}</label>
             {% if member.is_admin %} <Label> (admin)</Label> {% endif %}
             <br>
             <small>{{member.phone_number}}</small>
+            <br>
             <small>{{member.email}}</small>
             <hr>
         </a>
